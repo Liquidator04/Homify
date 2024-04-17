@@ -1,7 +1,6 @@
-import Header from "./Header"
 import BackgroundImage from "./BackgroundImage"
-import Search from "./Search" 
-import Footer from "./Footer"
+import Search from "../../Utilities/Search" 
+import Footer from "../../Utilities/Footer"
 
 function App() {
 

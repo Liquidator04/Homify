@@ -1,0 +1,12 @@
+.content-container{
+    height:290px;
+    width:800px;
+    /* border:solid black 1px; */
+    display:flex;
+}
+
+.data-container{
+    display:flex;
+    justify-content: space-evenly;
+
+}

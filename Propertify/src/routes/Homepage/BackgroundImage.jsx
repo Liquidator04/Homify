@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from "../../Utilities/Header"
 import "./BackgroundImage.css"
 
 export default function BackgroundImage(){

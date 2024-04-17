@@ -37,3 +37,7 @@
 .internal-text:hover{
     color: #FFFFFF;
 }
+
+.image-container{
+    border-radius: 50%;
+}
