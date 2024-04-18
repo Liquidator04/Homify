@@ -1,6 +1,6 @@
 .content-container{
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-left: 10px;
+    padding-top: 15px;
     height:160px;
     width:600px;
     border:solid black 1px;
@@ -28,4 +28,13 @@ img{
 .the-contact-submit{
     display:flex;
     gap:100px;
+}
+
+.button-submit{
+    padding:2px;
+    background-color: #0763b4;
+    border-color: #0763b4;
+    color: white;
+    border-radius: 0.25rem;
+    margin-bottom: 10px;
 }

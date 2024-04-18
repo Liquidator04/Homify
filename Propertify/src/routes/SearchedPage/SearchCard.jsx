@@ -17,7 +17,7 @@ export default function SearchCard({IMGurl,Name,Address,Price,Sqft,BHK,ContactNu
                     </div>
                     <div className="the-contact-submit">
                         {ContactNumber}
-                        <a href="#"><button>Submit</button></a>
+                        <a href="#"><button class="button-submit" role="button">View</button></a>
                     </div>
                 </div>
             </div>

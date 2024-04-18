@@ -9,7 +9,7 @@ export default function Search(){
                 <h4 className="search-text"><img src="/Logo.jpg" height={30} width={30} className="image-container"></img> Search</h4>
                 <div className="input-container">
                     <div className="input">
-                        <label for="language">Location:</label>
+                        <label for="language">Location</label>
                         <select name="language" id="language">
                             <option value="BLR">Bangalore</option>
                             <option value="MUM">Mumbai</option>
@@ -18,11 +18,12 @@ export default function Search(){
 
                     </div>
                     <div className="input">
-                        <label for="language">Type:</label>
+                        <label for="language">Type</label>
                         <select name="language" id="language">
                             <option value="1">1 BHK</option>
                             <option value="2">2 BHK</option>
                             <option value="3">3 BHK</option>
+                            <option value="any">Any</option>
                         </select>
                     </div>
                 </div>
