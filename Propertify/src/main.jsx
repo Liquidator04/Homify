@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import App from './routes/Homepage/App.jsx';
 import App1 from './routes/SearchedPage/App.jsx';
+import App2 from './routes/Listing/App.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/SearchedPage",
     element: <App1/>,
+  },
+  {
+    path: "/ListingPage",
+    element: <App2/>,
   },
 ]);
 
