@@ -1,3 +1,4 @@
+
 #skyscraper{
     height: 100vh;
     width: 50%;
@@ -13,14 +14,17 @@
     margin-top: -10px;
 }
 #property_listing_container2{
-    padding: 110px 10px 10px 250px;
+    /* padding: 110px 10px 10px 250px; */
     background-color: white;
-    z-index: -1;
+    /* z-index: -1; */
+    margin-top: 10px;
     width: 50%;
     color: white;
 }
 #property_listing_container3{
+    margin: 110px 10px 10px 250px;
     border: solid black 1px;
+    height: fit-content;
     width:fit-content;
     background-color:#063970;
     padding: 20px;
