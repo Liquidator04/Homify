@@ -4,7 +4,7 @@ import Footer from "../../Utilities/Footer"
 import Header from "../../Utilities/Header"
 import "./App.css"
 
-function App3() {
+function App4() {
 
   return (
     <>
@@ -15,7 +15,7 @@ function App3() {
           </div>
           <br/><br/>
           <div className="flex_container">
-            <h1 id="login_h1" className="login">Sign in to Homify</h1>
+            <h1 id="login_h1" className="login">Create Account</h1>
           </div>
           <br/>
           <div id="login_container4" className="login">
@@ -26,13 +26,14 @@ function App3() {
             <p>Password</p>
             
             <input type="password" className="login_input"></input>
+
+            <p>Confirm password</p>
             
-            <a href="/"><button id="submit_button">Sign in</button></a>
+            <input type="password" className="login_input"></input>
+            
+            <a href="/LoginPage"><button id="submit_button">Sign up</button></a>
           </div>
           <br/><br/>
-          <div id="login_container5" className="flex_container">
-            <p>New to Homify?</p> <a href="/CreateAccount">Create an account</a>
-          </div>
         </div> 
       </div>
       <Footer/>
@@ -40,4 +41,4 @@ function App3() {
   )
 }
 
-export default App3
+export default App4

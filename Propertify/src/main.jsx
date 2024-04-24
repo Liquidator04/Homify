@@ -8,6 +8,7 @@ import App from './routes/Homepage/App.jsx';
 import App1 from './routes/SearchedPage/App.jsx';
 import App2 from './routes/Listing/App.jsx'
 import App3 from './routes/Login/App.jsx'
+import App4 from './routes/CreateAccount/App.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/LoginPage",
     element: <App3/>,
+  },
+  {
+    path: "/CreateAccount",
+    element: <App4/>,
   },
 ]);
 
