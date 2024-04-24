@@ -17,31 +17,34 @@ function App2() {
 
             <div id="property_listing_container2">
                 <div id="property_listing_container3">
-                    <h1>Property Listing</h1><br/>
-                    <form action="/action_page.php">
-                        <label htmlFor="property_name">Property Name:</label><br/>
-                        <input type="text" id="property_name" name="property_name"/><br/>
-                        <label htmlFor="location">Location:</label><br/>
-                        <input type="text" id="location" name="location"/><br/>
-                        <label htmlFor="monthly_rent">Monthly Rent:</label><br/>
-                        <input type="text" id="monthly_rent" name="monthly_rent"/><br/>
-                        <label htmlFor="area">Area (in sqft):</label><br/>
-                        <input type="text" id="area" name="area"/><br/>
+                    <h1>List Property </h1>
+                    <form action="/action_page.php" id="containing_form">
+                        <label htmlFor="property_name">Property Name:</label>
+                        <input type="text" id="property_name" name="property_name" className="login_input"/>
+                        <label htmlFor="location">Location:</label>
+                        <input type="text" id="location" name="location" className="login_input"/>
+                        <label htmlFor="monthly_rent">Monthly Rent:</label>
+                        <input type="text" id="monthly_rent" name="monthly_rent" className="login_input"/>
+                        <label htmlFor="area">Area (in sqft):</label>
+                        <input type="text" id="area" name="area" className="login_input"/>
 
-                        <label> Room Size:</label><br/>
-                        <input type="radio" id="html" name="fav_language" value="HTML"/>
-                        <label htmlFor="html">1 BHK</label><br/>
-                        <input type="radio" id="css" name="fav_language" value="CSS"/>
-                        <label htmlFor="css">2 BHK</label><br/>
-                        <input type="radio" id="javascript" name="fav_language" value="JavaScript"/>
-                        <label htmlFor="javascript">3 BHK</label><br/>
+                        <div className="property_listing_container4">
+                            <label> Type:</label>
+                            <select name="language" id="language" className="bhk_type">
+                                <option value="1">1 BHK</option>
+                                <option value="2">2 BHK</option>
+                                <option value="3">3 BHK</option>
+                                <option value="any">Any</option>
+                            </select>
+                        </div>
 
-                        <label htmlFor="phone">Phone no:</label><br/>
-                        <input type="text" id="phone" name="phone"/><br/><br/>
-                        <input type="file"/><br/>
+                        
+                        <label htmlFor="phone">Phone no:</label>
+                        <input type="text" id="phone" name="phone" className="login_input"/>
+                        <label htmlFor="ImageURL">ImageURL:</label>
+                        <input type="text" id="ImageURL" name="ImageURL" className="login_input"/>
 
-                        <br/>
-                        <input type="submit" value="Submit" id="listing_button" className="submit_button"/>
+                        <input type="submit" value="Add Property" id="listing_button" className="submit_button"/>
                     </form>
                 </div>
             </div>
