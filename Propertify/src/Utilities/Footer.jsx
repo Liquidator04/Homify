@@ -13,7 +13,7 @@ export default function Footer(){
                     <a href="">Social</a>
 
                 </div>
-                <p>Copyright &copy; 2024 Homify</p>
+                <p class="footer_text">Copyright &copy; 2024 Homify</p>
             </div>
         </footer>
     )

@@ -23,11 +23,10 @@
 }
 #property_listing_container3{
     margin: 110px 10px 10px 250px;
-    border: solid black 1px;
     height: fit-content;
     width:fit-content;
-    background-color:#063970;
+    background-color:#18448c;
     padding: 20px;
     border-radius: 10%;
-    box-shadow: 0 4px 8px 0 #063970, 0 6px 20px 0 #063970;
+    box-shadow: 0 4px 8px 0 #18448c, 0 6px 20px 0 #18448c;
 }
