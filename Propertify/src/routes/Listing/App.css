@@ -1,0 +1,29 @@
+#skyscraper{
+    height: 100vh;
+    width: 50%;
+    z-index: -1;
+}
+#property_listing_container0{
+    height:fit-content;
+    width: 100%;
+    background-color: black;
+}
+#property_listing_container1{
+    display: flex;
+    margin-top: -10px;
+}
+#property_listing_container2{
+    padding: 110px 10px 10px 250px;
+    background-color: white;
+    z-index: -1;
+    width: 50%;
+    color: white;
+}
+#property_listing_container3{
+    border: solid black 1px;
+    width:fit-content;
+    background-color:#063970;
+    padding: 20px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 #063970, 0 6px 20px 0 #063970;
+}
