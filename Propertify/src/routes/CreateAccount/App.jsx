@@ -24,6 +24,7 @@ function App4() {
 				'Content-Type': 'application/json'
 			}
 		})
+    console.log('JSON: ',result.json)
 		result = await result.json();
 		console.warn(result);
 		if (result) {
