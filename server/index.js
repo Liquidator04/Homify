@@ -3,12 +3,12 @@
 
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/', {
+mongoose.connect('mongodb+srv://Aritra:Nansa123@mycluster.davmkof.mongodb.net/', {
 	dbName: 'UserInformation',
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 }, err => err ? console.log(err) : 
-	console.log('Connected to UserInfo database'));
+	console.log('Connected to UserInformation database'));
 
 // Schema for users of app
 const UserSchema = new mongoose.Schema({
