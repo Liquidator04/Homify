@@ -55,7 +55,7 @@ function App3() {
             
             <input type="password" className="login_input" onChange={(e) => setPassword(e.target.value)}></input>
             
-            <a href="/"><button class="submit_button" onClick={handleSubmit}>Sign in</button></a>
+            <a href="/"><button className="submit_button" onClick={handleSubmit}>Sign in</button></a>
           </div>
           <br/><br/>
           <div id="login_container5" className="flex_container">
