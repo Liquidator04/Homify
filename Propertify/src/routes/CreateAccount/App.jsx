@@ -17,6 +17,7 @@ function App4() {
 		e.preventDefault();
 		let result = await fetch(
 		'https://homify-server.vercel.app/register', {
+      mode: 'no-cors',
 			method: "post",
 			body: JSON.stringify({ name, password }),
 			headers: {
