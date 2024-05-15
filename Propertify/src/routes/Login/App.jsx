@@ -14,7 +14,7 @@ function App3() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let result = await fetch(
-      'http://localhost:5000/login',{
+      'homify-server.vercel.app/login',{
           method:"post",
           body : JSON.stringify({ name, password }),
           headers: {
