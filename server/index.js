@@ -4,52 +4,34 @@
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
-async function connectToDatabase() {
-    try {
-        await mongoose.connect(process.env.MONGODB_URI, {
-            dbName: 'UserInformation',
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
-        console.log('Connected to UserInformation database');
+mongoose.connect(process.env.MONGODB_URI, {
+	dbName: 'UserInformation',
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+}, err => err ? console.log('They hit the other tower') : 
+	console.log('Connected to UserInformation database'));
 
-        // Create indexes
-        await User.createIndexes();
-
-        // Start server
-        app.listen(5000, () => {
-            console.log("App listening at port 5000");
-        });
-    } catch (error) {
-        console.error('Error connecting to MongoDB:', error);
-        process.exit(1); // Exit the process if unable to connect to MongoDB
-    }
-}
-
-// Define user schema and model
+// Schema for users of app
 const UserSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    loginStatus: {
-        type: Boolean,
-        default: false,
-    },
-    date: {
-        type: Date,
-        default: Date.now,
-    },
+	name: {
+		type: String,
+		required: true,
+	},
+	password: {
+		type: String,
+		required: true,
+		unique: true,
+	},
+	loginStatus: {
+		type : Boolean,
+		default : false,
+	},
+	date: {
+		type: Date,
+		default: Date.now,
+	},
 });
 const User = mongoose.model('users', UserSchema);
-
-// Call connectToDatabase function to start the application
-connectToDatabase();
 User.createIndexes();
 
 // For backend and express
