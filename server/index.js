@@ -3,14 +3,13 @@
 
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
-async function connectDB(){
-	mongoose.connect(process.env.MONGODB_URI, {
-		dbName: 'UserInformation',
-		useNewUrlParser: true,
-		useUnifiedTopology: true
-	}, err => err ? console.log(err) : 
-		console.log('Connected to UserInformation database'));
-}
+mongoose.connect(process.env.MONGODB_URI, {
+	dbName: 'UserInformation',
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+}, err => err ? console.log(err) : 
+	console.log('Connected to UserInformation database'));
+
 // Schema for users of app
 const UserSchema = new mongoose.Schema({
 	name: {
@@ -55,7 +54,6 @@ app.get("/", (req, resp) => {
 	
 	// If you see App is working means
 	// backend working properly
-	connectDB()
 });
 
 app.post("/login", async (req, res) => {
