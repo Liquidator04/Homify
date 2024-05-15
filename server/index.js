@@ -8,7 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ["https://homify-client-test.vercel.app/"],
+    origin: ["https://homify-client-test.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));
