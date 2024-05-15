@@ -4,7 +4,7 @@
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect('mongodb+srv://Aritra:Nansa123@mycluster.davmkof.mongodb.net/', {
 	dbName: 'UserInformation',
 	useNewUrlParser: true,
 	useUnifiedTopology: true
