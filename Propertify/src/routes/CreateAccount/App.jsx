@@ -16,7 +16,8 @@ function App4() {
 	const handleOnSubmit = async (e) => {
 		e.preventDefault();
 		let result = await fetch(
-		'homify-server.vercel.app/register', {
+		'https://homify-server.vercel.app/register', {
+      mode: 'no-cors',
 			method: "post",
 			body: JSON.stringify({ name, password }),
 			headers: {
