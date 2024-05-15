@@ -3,13 +3,15 @@
 
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
-console.log("Trying to connect to database")
-mongoose.connect(process.env.MONGODB_URI, {
-	dbName: 'UserInformation',
-	useNewUrlParser: true,
-	useUnifiedTopology: true
-}, err => err ? console.log(err) : 
-	console.log('Connected to UserInformation database'));
+const connectDB = async () => {
+    await mongoose.connect(process.env.MONGODB_URI, {
+		dbName: 'UserInformation',
+		useNewUrlParser: true,
+		useUnifiedTopology: true
+	}, err => err ? console.log(err) : 
+		console.log('Connected to UserInformation database'));
+}
+
 
 // Schema for users of app
 const UserSchema = new mongoose.Schema({
@@ -50,6 +52,7 @@ app.use(cors(
 app.get("/", (req, resp) => {
 
 	resp.send("App is Working");
+	connectDB
 	// You can check backend is working or not by 
 	// entering http://loacalhost:5000
 	
