@@ -3,7 +3,7 @@
 
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGODB_URI, {
 	dbName: 'UserInformation',
 	useNewUrlParser: true,
