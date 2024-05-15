@@ -39,7 +39,13 @@ const app = express();
 const cors = require("cors");
 console.log("App listen at port 5000");
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+	{
+		origin: ["https://homify-client-test.vercel.app/"],
+		methods: ["POST", "GET"],
+		credentials: true
+	}
+));
 app.get("/", (req, resp) => {
 
 	resp.send("App is Working");
