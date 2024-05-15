@@ -3,11 +3,12 @@
 
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
+
 mongoose.connect(process.env.MONGODB_URI, {
 	dbName: 'UserInformation',
 	useNewUrlParser: true,
 	useUnifiedTopology: true
-}, err => err ? console.log('They hit the other tower') : 
+}, err => err ? console.log(err) : 
 	console.log('Connected to UserInformation database'));
 
 // Schema for users of app
