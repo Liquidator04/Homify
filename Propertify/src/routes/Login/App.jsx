@@ -3,8 +3,36 @@ import Search from "../../Utilities/Search"
 import Footer from "../../Utilities/Footer"
 import Header from "../../Utilities/Header"
 import "./App.css"
+import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function App3() {
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [password, setPassword]=useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let result = await fetch(
+      'http://localhost:5000/login',{
+          method:"post",
+          body : JSON.stringify({ name, password }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+      }
+    )
+    result = await result.json();
+    console.warn(result);
+    console.log("Result data : "+result);
+    if(result === "Success"){
+      navigate("/")
+    }else{
+        navigate("/LoginPage")
+        alert("Invalid username or password")
+
+    }
+  }
 
   return (
     <>
@@ -21,13 +49,13 @@ function App3() {
           <div id="login_container4" className="login">
             <p>Username or email address</p>
             
-            <input type="text" className="login_input"></input>
+            <input type="text" className="login_input" value={name} onChange={(e) => setName(e.target.value)}></input>
             
             <p>Password</p>
             
-            <input type="password" className="login_input"></input>
+            <input type="password" className="login_input" onChange={(e) => setPassword(e.target.value)}></input>
             
-            <a href="/"><button class="submit_button">Sign in</button></a>
+            <a href="/"><button class="submit_button" onClick={handleSubmit}>Sign in</button></a>
           </div>
           <br/><br/>
           <div id="login_container5" className="flex_container">
